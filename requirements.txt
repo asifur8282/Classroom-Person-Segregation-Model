@@ -1,0 +1,10 @@
+opencv-python
+fastAPI
+ultralytics
+uvicorn
+tensorflow
+pydantic
+openai-whisper
+python-multipart
+scikit-learn
+httpx
