@@ -1,7 +1,4 @@
-
-
-````markdown
-# 🎓 Classroom Person Segregation Model
+## 🎓 Classroom Person Segregation Model
 
 This project detects and segments **students in classroom images** using **YOLOv8 segmentation**.  
 It blurs the background while keeping each person sharp and saves them as cropped images.  
@@ -23,10 +20,9 @@ Built with **FastAPI** for easy API integration.
    ```bash
    git clone https://github.com/your-username/Classroom-Person-Segregation-Model.git
    cd Classroom-Person-Segregation-Model
-````
+   ```
 
 2. Create a virtual environment (optional but recommended):
-
    ```bash
    python -m venv venv
    source venv/bin/activate    # On Linux/Mac
@@ -34,13 +30,11 @@ Built with **FastAPI** for easy API integration.
    ```
 
 3. Install dependencies:
-
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Download the YOLOv8 segmentation model if not already present:
-
    ```bash
    # This will be handled automatically by ultralytics
    # But you can also download manually if needed
@@ -65,19 +59,16 @@ By default, it runs on `http://localhost:8000`.
 ### Upload an Image
 
 Using **PowerShell**:
-
 ```bash
 curl.exe -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 ```
 
 Using **Linux / Mac terminal**:
-
 ```bash
 curl -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 ```
 
 ### Response
-
 ```json
 {
   "total_students": 5
@@ -85,7 +76,6 @@ curl -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 ```
 
 ### Output
-
 * Cropped student images are saved in the `classroomouts/` directory.
 * Each cropped image is **300x300** with the background blurred.
 
@@ -123,5 +113,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 * [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) for object detection and segmentation.
 * [FastAPI](https://fastapi.tiangolo.com/) for creating a lightweight and fast API.
-
-
