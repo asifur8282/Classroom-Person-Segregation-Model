@@ -86,7 +86,7 @@ def process_students_with_yolo(image_data: np.ndarray, output_dir: str, start_in
                 # --- NOW CROP THE FINAL IMAGE ---
                 # Calculate the crop dimensions
                 w = x2 - x1
-                square_side = w + 20
+                square_side = w + 30
                 
                 new_x1 = max(0, x1 - 10)
                 new_y1 = max(0, y1)

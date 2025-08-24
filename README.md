@@ -90,6 +90,7 @@ Input Classroom Image ⬇️
 Output (segregated students with blurred background) ⬇️
 
 <img src="assets/output_example.jpg" width="500" alt="Output Example"/>
+<img src="assets/output_example_cmd.jpg" width="500" alt="Output Example"/>
 
 ---
 
