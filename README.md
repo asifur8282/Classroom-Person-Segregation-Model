@@ -85,7 +85,7 @@ curl -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 
 Input Classroom Image ⬇️
 
-<img src="assets/classroom_sample.jpg" width="500" alt="Classroom Example"/>
+<img src="assets/classroom_sample.jpeg" width="500" alt="Classroom Example"/>
 
 Output (segregated students with blurred background) ⬇️
 
