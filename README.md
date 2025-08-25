@@ -1,7 +1,7 @@
-## 🎓 Classroom Person Segregation Model
+## 🎓 Classroom Person Segregation Models
 
 This project detects and segments **students in classroom images** using **YOLOv8 segmentation**.  
-It blurs the background while keeping each person sharp and saves them as cropped images.  
+It blurs the background ( or choose no blur model ) while keeping each person sharp and saves them as cropped images.  
 Built with **FastAPI** for easy API integration.  
 
 ---
@@ -105,7 +105,7 @@ Command Prompt Output <br>
 ---
 
 ### For No Blur Model
-Input Classroom Image ⬇️
+Input Classroom Image ⬇️ <br>
 <img src="assets/sample.jpg" width="500" alt="Classroom Example"/>
 
 Output (segregated students) ⬇️
