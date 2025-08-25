@@ -69,9 +69,16 @@ curl -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 ```
 
 ### Response
+Blur Model Sample Image 1:
 ```json
 {
   "total_students": 5
+}
+```
+No Blur Model Sample Image 2:
+```json
+{
+  "total_students": 8
 }
 ```
 
@@ -83,6 +90,7 @@ curl -X POST -F "file=@image_1.jpg" http://localhost:8000/detect_students/
 
 ## 📂 Example
 
+### For Blur Model 
 Input Classroom Image ⬇️
 
 <img src="assets/classroom_sample.jpg" width="500" alt="Classroom Example"/>
@@ -90,9 +98,23 @@ Input Classroom Image ⬇️
 Output (segregated students with blurred background) ⬇️
 
 <img src="assets/output.jpg" width="500" alt="Output Example"/>
+<br>
+Command Prompt Output <br>
 <img src="assets/output_cmd.jpg" width="500" alt="Output Example"/>
 
 ---
+
+### For No Blur Model
+Input Classroom Image ⬇️
+<img src="assets/sample.jpg" width="500" alt="Classroom Example"/>
+
+Output (segregated students) ⬇️
+
+<img src="assets/output_no_blur.jpg" width="500" alt="Output Example"/>
+<br>
+Command Prompt Output <br>
+<img src="assets/no_blur_cmd.jpg" width="500" alt="Output Example"/>
+
 
 ## ⚡ Tech Stack
 
