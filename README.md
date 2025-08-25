@@ -106,14 +106,15 @@ Command Prompt Output <br>
 
 ### For No Blur Model
 Input Classroom Image ⬇️ <br>
+<br>
 <img src="assets/sample.jpg" width="500" alt="Classroom Example"/>
 
 Output (segregated students) ⬇️
 
-<img src="assets/output_no_blur.jpg" width="500" alt="Output Example"/>
+<img src="assets/output_no_blur.jpg" width="800" alt="Output Example"/>
 <br>
 Command Prompt Output <br>
-<img src="assets/no_blur_cmd.jpg" width="500" alt="Output Example"/>
+<img src="assets/no_blur_cmd.jpg" width="800" alt="Output Example"/>
 
 
 ## ⚡ Tech Stack
