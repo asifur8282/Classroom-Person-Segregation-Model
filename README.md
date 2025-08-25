@@ -97,10 +97,10 @@ Input Classroom Image ⬇️
 
 Output (segregated students with blurred background) ⬇️
 
-<img src="assets/output.jpg" width="500" alt="Output Example"/>
+<img src="assets/output.jpg" width="800" alt="Output Example"/>
 <br>
 Command Prompt Output <br>
-<img src="assets/output_cmd.jpg" width="500" alt="Output Example"/>
+<img src="assets/output_cmd.jpg" width="800" alt="Output Example"/>
 
 ---
 
