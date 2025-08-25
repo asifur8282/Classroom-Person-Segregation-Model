@@ -138,4 +138,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 * [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics) for object detection and segmentation.
 * [FastAPI](https://fastapi.tiangolo.com/) for creating a lightweight and fast API.
 
-<span style="font-family:Arial; font-size:18px;">This is custom styled text in Arial.</span>
+
