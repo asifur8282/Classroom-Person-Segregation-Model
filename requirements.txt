@@ -4,7 +4,7 @@ ultralytics==8.3.168
 uvicorn
 tensorflow==2.20.0
 pydantic
-openai-whisper
+openai-whisper==20250625
 python-multipart
-scikit-learn
+scikit-learn==1.7.1
 httpx
