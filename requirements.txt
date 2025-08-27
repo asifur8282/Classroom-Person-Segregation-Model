@@ -1,6 +1,6 @@
 opencv-python
 fastAPI
-ultralytics
+ultralytics==8.3.168
 uvicorn
 tensorflow
 pydantic
