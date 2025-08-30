@@ -52,7 +52,7 @@ python body_lang_3.py
 ```
 For the No Blur Model Use:
 ```bash
-python body_lang_3.py
+python students_no_blur_final.py
 ```
 By default, it runs on `http://localhost:8000`.
 
