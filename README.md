@@ -46,6 +46,7 @@ Built with **FastAPI** for easy API integration.
 
 Start the FastAPI server:
 
+For the Blur Model Use
 ```bash
 python body_lang_3.py
 ```
