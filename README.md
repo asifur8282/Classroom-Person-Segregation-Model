@@ -46,11 +46,14 @@ Built with **FastAPI** for easy API integration.
 
 Start the FastAPI server:
 
-For the Blur Model Use
+For the Blur Model Use:
 ```bash
 python body_lang_3.py
 ```
-
+For the No Blur Model Use:
+```bash
+python body_lang_3.py
+```
 By default, it runs on `http://localhost:8000`.
 
 ---
