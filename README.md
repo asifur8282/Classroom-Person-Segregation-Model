@@ -1,3 +1,11 @@
+# Classroom Compass - Classroom Person Segregation Model
+
+This repository contains the code for the **Classroom Person Segregation Model**, a key microservice for the larger **Classroom Compass** project.
+
+Classroom Compass is an AI-powered platform designed to provide real-time, non-intrusive feedback to teachers about student engagement. It helps teachers understand when a class is confused or disengaged without tracking individual students, allowing them to adjust their teaching style on the fly.
+
+
+
 ## 🎓 Classroom Person Segregation Models
 
 This project detects and segments **students in classroom images** using **YOLOv8 segmentation**.  
