@@ -4,7 +4,24 @@ This repository contains the code for the **Classroom Person Segregation Model**
 
 Classroom Compass is an AI-powered platform designed to provide real-time, non-intrusive feedback to teachers about student engagement. It helps teachers understand when a class is confused or disengaged without tracking individual students, allowing them to adjust their teaching style on the fly.
 
+Here is the updated "Role in the Project Pipeline" section, rewritten for your first service (the Segregation Model).
 
+You can just copy this text and replace that section in your *other* `README.md` file.
+
+---
+
+## Role in the Project Pipeline
+
+This service is the **first stage** in a two-stage computer vision pipeline for the larger Classroom Compass project.
+
+1.  **Stage 1: Segregation (This Service)**
+    This service's FastAPI endpoint (`/detect_students/`) accepts a single, large image of a classroom. It uses a YOLOv8 segmentation model to detect every person, blur the background (optional), and save each detected student as a separate 300x300 cropped image in the `classroomouts/` directory.
+
+2.  **Stage 2: Classification (External)**
+    The cropped images from the `classroomouts/` directory are then intended to be sent (in a batch) to a second microservice, the [Classroom-Compass-Classifier](https://github.com/asifur8282/Classroom-Compass-Classifier). That service is responsible for classifying each individual student image as `focusing` or `distracted`.
+
+3.  **Final Output:**
+    The classifier service returns a final JSON object with aggregated counts (e.g., `{"focusing": 15, "distracted": 3}`), which is then consumed by the main Classroom Compass dashboard to provide real-time feedback to the teacher.
 
 ## 🎓 Classroom Person Segregation Models
 
