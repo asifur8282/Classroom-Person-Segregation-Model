@@ -1,9 +1,3 @@
-I'm really sorry about that\! That is incredibly frustrating. It's definitely a VS Code rendering issue, but it's easier if I just give you the raw text.
-
-Here is the complete, final `README.md` file. You can copy this entire block and paste it directly into your `README.md` file in VS Code.
-
------
-
 # Classroom Compass - Classroom Person Segregation Model
 
 This repository contains the code for the **Classroom Person Segregation Model**, a key microservice for the larger **Classroom Compass** project.
