@@ -9,3 +9,5 @@ Thumbs.db
 *.log
 *.pt
 .env
+classroomouts/
+classroomouts2/
