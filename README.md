@@ -191,14 +191,14 @@ The server will return a JSON object with the total student count.
 
 Input Classroom Image ⬇️
 
-\<img src="assets/classroom\_sample.jpg" width="500" alt="Classroom Example"/\>
+<img src="assets/classroom\_sample.jpg" width="500" alt="Classroom Example"/>
 
 Output (segregated students with blurred background) ⬇️
 
-\<img src="assets/output.jpg" width="800" alt="Output Example"/\>
+<img src="assets/output.jpg" width="800" alt="Output Example"/>
 <br>
 Command Prompt Output <br>
-\<img src="assets/output\_cmd.jpg" width="800" alt="Output Example"/\>
+<img src="assets/output\_cmd.jpg" width="800" alt="Output Example"/>
 
 -----
 
@@ -206,14 +206,14 @@ Command Prompt Output <br>
 
 Input Classroom Image ⬇️ <br>
 <br>
-\<img src="assets/sample.jpg" width="500" alt="Classroom Example"/\>
+<img src="assets/sample.jpg" width="500" alt="Classroom Example"/>
 
 Output (segregated students) ⬇️
 
-\<img src="assets/output\_no\_blur.jpg" width="800" alt="Output Example"/\>
+<img src="assets/output\_no\_blur.jpg" width="800" alt="Output Example"/>
 <br>
 Command Prompt Output <br>
-\<img src="assets/no\_blur\_cmd.jpg" width="800" alt="Output Example"/\>
+<img src="assets/no\_blur\_cmd.jpg" width="800" alt="Output Example"/>
 
 -----
 
