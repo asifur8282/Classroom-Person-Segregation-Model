@@ -256,15 +256,6 @@ This repository's `Dockerfile` supports selecting the PyTorch wheel at build tim
   * If the host has NVIDIA GPUs and drivers installed, prefer a matching CUDA wheel (e.g. `cu118`, `cu121`). Installing a CPU-only wheel on a GPU host will still run but will not take advantage of GPU acceleration.
   * To determine the correct CUDA target, check the host NVIDIA driver/CUDA compatibility. If unsure, test `cu118` or consult the PyTorch install selector: [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
 
-### Efficiency recommendations
-
-  * Keep `requirements.txt` free of `torch`/`torchvision` so the Docker build installs the correct wheel for the target CPU/GPU.
-  * If you prefer faster builds, remove or comment out the model preload step in the `Dockerfile`:
-    ```dockerfile
-    # RUN python -c "from ultralytics import YOLO; YOLO('yolov8x-seg.pt')"
-    ```
-    Let the container download the model on first run instead.
-
 -----
 
 ## 📜 License
