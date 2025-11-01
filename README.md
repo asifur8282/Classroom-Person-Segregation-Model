@@ -156,6 +156,63 @@ Command Prompt Output <br>
 
 ---
 
+## 🧭 Choosing PYTORCH_TARGET & efficient deployment
+
+This repository's `Dockerfile` supports selecting the PyTorch wheel at build time via the build-arg `PYTORCH_TARGET`. The goal is to produce images that run efficiently on the target machine (CPU or NVIDIA GPU), and to avoid installing the wrong or heavy PyTorch binary.
+
+Quick guide
+
+- Build for CPU (default):
+   ```bash
+   docker build -t segregation-model .
+   ```
+
+- Build for NVIDIA GPU with CUDA 11.8:
+   ```bash
+   docker build --build-arg PYTORCH_TARGET=cu118 -t segregation-model .
+   ```
+
+- Build for NVIDIA GPU with CUDA 12.1:
+   ```bash
+   docker build --build-arg PYTORCH_TARGET=cu121 -t segregation-model .
+   ```
+
+Run the container (GPU):
+
+```bash
+docker run --gpus all -p 8000:8000 segregation-model
+```
+
+Run the container (CPU-only):
+
+```bash
+docker run -p 8000:8000 segregation-model
+```
+
+Notes and tips for choosing the right target
+
+- If the host has NVIDIA GPUs and drivers installed, prefer a matching CUDA wheel (e.g. `cu118`, `cu121`). Installing a CPU-only wheel on a GPU host will still run but will not take advantage of GPU acceleration.
+- To determine the correct CUDA target, check the host NVIDIA driver/CUDA compatibility. If unsure, test `cu118` or consult the PyTorch install selector: https://pytorch.org/get-started/locally/
+- For reproducibility, you can pin `torch` and `torchvision` to explicit versions that match the CUDA target. I can add pinned versions on request.
+
+Efficiency recommendations
+
+- Keep `requirements.txt` free of `torch`/`torchvision` so the Docker build installs the correct wheel for the target CPU/GPU.
+- If you prefer faster builds, remove or comment out the model preload step in the `Dockerfile`:
+   ```dockerfile
+   # RUN python -c "from ultralytics import YOLO; YOLO('yolov8x-seg.pt')"
+   ```
+   Let the container download the model on first run instead.
+- For production/high-throughput:
+   - Use multi-stage builds to reduce final image size.
+   - Use a shared model cache or model registry so multiple builds/containers don't repeatedly download the same weights.
+   - Consider batching requests or using a worker pool if you expect many images per second.
+
+NPU / vendor-specific accelerators
+
+- Support for vendor NPUs (Habana, AWS Trainium/Inferentia, Intel accelerators, etc.) is vendor-specific and typically requires vendor runtimes or special PyTorch builds. If you want NPU support, tell me which vendor and I will add conditional install steps.
+
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
